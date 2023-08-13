@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Marker</title>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/all.min.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body class="bg-light">
+    <div class="container d-flex flex-column justify-content-center align-items-center position-relative title">
+        <h1 class="text-center display-3  position-relative">Bookmarker</h1>
+    </div>
+    <hr>
+    <div class="container d-flex flex-column justify-content-center align-items-center">
+       <h3><span><i class="fa-solid fa-bookmark"></i></span> Bookmark your favorite sites  <span><i class="fa-solid fa-bookmark"></i></span> </h3>
+    </div>
+    <div class="container my-5">
+        <label for="siteName" class="fs-4"><span><i class="fa-solid fa-book-bookmark fs-6 pe-2"></i></span>Site Name</label>
+        <input type="text" class="form-control my-2 " id="siteName" placeholder="Bookmark Name">
+        <label for="siteLink" class="fs-4"><span><i class="fa-solid fa-link fs-6 pe-2"></i></span>Site Link</label>
+        <input type="text" class="form-control my-2" id="siteLink" placeholder="Website URL">
+        <button class="btn btn-danger px-5 w-100 my-4" type="submit" id="btnSubmit" onclick="addSite();"> submit</button>
+    </div>
+    <div class="container">
+        <table class="table bg-white">
+            <thead>
+                <th>Index</th>
+                <th>Website Name</th>
+                <th>Visit</th>
+                <th>Delete</th>
+            </thead>
+            <tbody id="tableData">
+                <!-- <tr>
+                    <td></td>
+                    <td></td>
+                    <td><button class="btn btn-success"><span><i class="fa-solid fa-eye" style="color: #fbfcfe;"></i></span> <a href="https://www.google.com" class="text-decoration-none text-white">Visit</a></button></td>
+                    <td><button class="btn btn-danger"><span><i class="fa-solid fa-trash" style="color: #fbfcfe;"></i></span>Delete</button></td>
+                </tr> -->
+            </tbody>
+        </table>
+    </div>
+    <div class="alarm p-4 m-auto d-none" id="alarm">
+        <div class="alarmMesssage rounded-3" >
+
+            <h5>Site Name or Url is not valid, Please follow the rules below :</h5>
+            <ul>
+                <li>Site name must contain at least 3 characters</li>
+                <li>Site URL must be a valid one</li>
+            </ul>
+            <div class="btns text-center">
+                <button class="btn btn-success" id="btnMessage" >Try Again</button>
+            </div>
+
+        </div>
+
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
